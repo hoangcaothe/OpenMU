@@ -199,6 +199,9 @@ namespace MUnique.OpenMU.Persistence.EntityFramework.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<int>("AggregateType")
+                        .HasColumnType("integer");
+
                     b.Property<Guid?>("CharacterClassId")
                         .HasColumnType("uuid");
 
@@ -2247,6 +2250,9 @@ namespace MUnique.OpenMU.Persistence.EntityFramework.Migrations
                     b.Property<string>("DisplayValueFormula")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("ExtendsDuration")
+                        .HasColumnType("boolean");
 
                     b.Property<byte>("MaximumLevel")
                         .HasColumnType("smallint");
